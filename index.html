@@ -9,8 +9,14 @@
 
 <body>
     <div class="background-stars">
-        <div class="stars"></div>
-        <div class="twinkling"></div>
+        <div class="cube" id="top">
+            <div class="stars"></div>
+            <div class="twinkling"></div>
+        </div>
+
+        <div class="cube" id="content">
+
+        </div>
 
     </div>
 </body>
@@ -29,11 +35,13 @@
     @media only screen and (min-width: 600px) {
         body {
             margin: 0;
+            background: rgb(0, 0, 0);
+            perspective: 800px;
         }
 
 
         .background-stars {
-            margin: 10px;
+            /* margin: 5px; */
         }
 
 
@@ -80,12 +88,12 @@
         .stars,
         .twinkling {
             position: absolute;
-            top: 10px;
-            left: 10px;
+            top: 0;
+            left: 0;
             right: 0;
             bottom: 0;
-            width: calc(100% - 20px);
-            height: calc(100% - 20px);
+            width: 100%;
+            height: 100%;
             display: block;
         }
 
@@ -107,5 +115,44 @@
             animation: move-twink-back 200s linear infinite;
         }
 
+        .cube {
+            position: relative;
+            width: 100%;
+            min-height: 100vh;
+        }
+
+        #top {
+            -webkit-transform-origin: 50% 100%;
+            transform-origin: 50% 100%;
+        }
+
+        #content {
+            background: rgb(255, 255, 255);
+            -webkit-transform-origin: 50% 0%;
+            transform-origin: 50% 0%;
+        }
+
     }
 </style>
+
+
+<script>
+    function rotateScenes() {
+        var scroll = window.pageYOffset,
+            relPos = scroll / height,
+            angle = 90 * relPos;
+        console.log('s:', scroll, ', h:', height);
+        if (scroll >= height) {
+            section1.style.transform = "rotateX(90deg)";
+            section2.style.transform = "rotateX(0deg)";
+        }
+
+        section1.style.transform = "rotateX(" + (angle) + "deg)";
+        section2.style.transform = "rotateX(-" + (90 - angle) + "deg)";
+    }
+
+    var section1 = document.querySelector("#top"),
+        section2 = document.querySelector("#content"),
+        height = window.innerHeight;
+    window.addEventListener("scroll", rotateScenes);
+</script>
