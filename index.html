@@ -10,9 +10,13 @@
 <body>
     <div class="background-stars">
         <div class="cube" id="top">
-            <div class="stars"></div>
+            <div class="stars">
+
+            </div>
             <div class="twinkling">
-                <img id="trophy" src="images/trophy.png" style="z-index: 2;">
+                <h1>2020</h1>
+                <h1>最佳僱員僱主選舉</h1>
+                <img id="trophy" src="images/trophy.png">
 
             </div>
         </div>
@@ -40,6 +44,7 @@
             margin: 0;
             background: rgb(0, 0, 0);
             perspective: 900px;
+            color: rgb(255, 255, 255);
         }
 
 
@@ -137,24 +142,13 @@
 
         #trophy {
             pointer-events: none;
-            width: 300px;
-            animation: rotate-trophy 3.5s infinite linear alternate;
+            height: 100vh;
         }
 
-
-        @keyframes rotate-trophy {
-            from {
-                transform: rotateY(-15deg);
-            }
-
-            to {
-                transform: rotateY(15deg);
-            }
-        }
 
         .twinkling {
             display: flex;
-            justify-content: center;
+            justify-content: flex-end;
             align-items: center;
         }
     }
