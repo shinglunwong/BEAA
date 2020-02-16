@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="background-stars">
+        <div class="stars"></div>
+        <div class="twinkling"></div>
+
+    </div>
+</body>
+
+</html>
+
+<style>
+    @media only screen and (max-width: 600px) {
+        body {
+            margin: 0;
+            background-color: lightblue;
+        }
+
+    }
+
+    @media only screen and (min-width: 600px) {
+        body {
+            margin: 0;
+        }
+
+
+        .background-stars {
+            margin: 10px;
+        }
+
+
+        @keyframes move-twink-back {
+            from {
+                background-position: 0 0;
+            }
+
+            to {
+                background-position: -10000px 5000px;
+            }
+        }
+
+        @-webkit-keyframes move-twink-back {
+            from {
+                background-position: 0 0;
+            }
+
+            to {
+                background-position: -10000px 5000px;
+            }
+        }
+
+        @-moz-keyframes move-twink-back {
+            from {
+                background-position: 0 0;
+            }
+
+            to {
+                background-position: -10000px 5000px;
+            }
+        }
+
+        @-ms-keyframes move-twink-back {
+            from {
+                background-position: 0 0;
+            }
+
+            to {
+                background-position: -10000px 5000px;
+            }
+        }
+
+        .stars,
+        .twinkling {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            right: 0;
+            bottom: 0;
+            width: calc(100% - 20px);
+            height: calc(100% - 20px);
+            display: block;
+        }
+
+        .stars {
+            background: #000 url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top center;
+            z-index: 0;
+        }
+
+        .twinkling {
+            background: transparent url(http://www.script-tutorials.com/demos/360/images/twinkling.png) repeat top center;
+            z-index: 1;
+
+            outline: 1px solid #fff;
+            outline-offset: -30px;
+            -moz-animation: move-twink-back 200s linear infinite;
+            -ms-animation: move-twink-back 200s linear infinite;
+            -o-animation: move-twink-back 200s linear infinite;
+            -webkit-animation: move-twink-back 200s linear infinite;
+            animation: move-twink-back 200s linear infinite;
+        }
+
+    }
+</style>
