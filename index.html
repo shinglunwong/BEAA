@@ -11,7 +11,10 @@
     <div class="background-stars">
         <div class="cube" id="top">
             <div class="stars"></div>
-            <div class="twinkling"></div>
+            <div class="twinkling">
+                <img id="trophy" src="images/trophy.png" style="z-index: 2;">
+
+            </div>
         </div>
 
         <div class="cube" id="content">
@@ -36,7 +39,7 @@
         body {
             margin: 0;
             background: rgb(0, 0, 0);
-            perspective: 800px;
+            perspective: 900px;
         }
 
 
@@ -132,6 +135,28 @@
             transform-origin: 50% 0%;
         }
 
+        #trophy {
+            pointer-events: none;
+            width: 300px;
+            animation: rotate-trophy 3.5s infinite linear alternate;
+        }
+
+
+        @keyframes rotate-trophy {
+            from {
+                transform: rotateY(-15deg);
+            }
+
+            to {
+                transform: rotateY(15deg);
+            }
+        }
+
+        .twinkling {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
     }
 </style>
 
