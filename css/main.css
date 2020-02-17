@@ -49,6 +49,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 #logo {
   width: 80%;
+  user-select: none;
 }
 
 .content-wrapper {
@@ -124,4 +125,8 @@ ul {
 
 .no-padding {
   padding: 0;
+}
+
+#map {
+  border: 24px solid #bda26b;
 }
