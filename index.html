@@ -9,8 +9,12 @@
     <link rel="stylesheet" type="text/css" href="./css/main.css">
     <link rel="stylesheet" type="text/css" href="./css/landingBackground.css">
     <link rel="stylesheet" type="text/css" href="./css/flip.css">
+<<<<<<< HEAD
     <link rel="stylesheet" type="text/css" href="./css/timeline.css">
 
+=======
+    <link rel="stylesheet" type="text/css" href="./css/gallery.css">
+>>>>>>> 062ba45087a77dfbe86585317bacc55d190a2441
     <script src="https://code.jquery.com/jquery-3.4.1.js"
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.1.1/gsap.min.js"></script>
@@ -38,12 +42,14 @@
                 <div class="container">
                     <div class="nav-menu">
                         <img id="logo" src="images/logo.png">
-                        <ul class="menu-text clk">
+                        <ul class="nav menu-text clk">
                             <li><a data-i18n href="#about">最佳僱員僱主選舉</a></li>
                             <li><a data-i18n href="#dates">重要日程</a></li>
                             <li><a data-i18n href="#application">報名及選舉</a></li>
                             <li><a data-i18n href="#album">上屆回顧</a></li>
                             <li><a data-i18n href="#contact">聯絡我們</a></li>
+                        </ul>
+                        <ul class="menu-text clk">
                             <li id="languageEng"><a href="javascript:void(0)">English</a></li>
                             <li id="languageChi"><a href="javascript:void(0)">中文</a></li>
                         </ul>
@@ -177,7 +183,69 @@
                             </ol>
                         </div>
                         <div class="content hide" id="album">
+                            <h1 data-i18n class="title-color">上屆回顧</h1>
 
+                            <div class="gallery" id="gallery">
+                                <div class="gallery-item">
+                                    <div class="content-album"><img src="./images/album/ceremony/AK0I1110_for FB.jpg">
+                                    </div>
+                                </div>
+                                <div class="gallery-item">
+                                    <div class="content-album"><img src="./images/album/ceremony/AK0I1215_for FB.jpg">
+                                    </div>
+                                </div>
+                                <div class="gallery-item">
+                                    <div class="content-album"><img src="./images/album/ceremony/AK0I1221_for FB.jpg">
+                                    </div>
+                                </div>
+                                <div class="gallery-item">
+                                    <div class="content-album"><img src="./images/album/ceremony/AK0I1251_for FB.jpg">
+                                    </div>
+                                </div>
+                                <div class="gallery-item">
+                                    <div class="content-album"><img src="./images/album/ceremony/AK0I1315_for FB.jpg">
+                                    </div>
+                                </div>
+                                <div class="gallery-item">
+                                    <div class="content-album"><img src="./images/album/ceremony/AK0I1334_for FB.jpg">
+                                    </div>
+                                </div>
+                                <div class="gallery-item">
+                                    <div class="content-album"><img src="./images/album/ceremony/AK0I1359_for FB.jpg">
+                                    </div>
+                                </div>
+                                <div class="gallery-item">
+                                    <div class="content-album"><img src="./images/album/ceremony/AK0I1371_for FB.jpg">
+                                    </div>
+                                </div>
+                                <div class="gallery-item">
+                                    <div class="content-album"><img src="./images/album/ceremony/AK0I1462_for FB.jpg">
+                                    </div>
+                                </div>
+                                <div class="gallery-item">
+                                    <div class="content-album"><img src="./images/album/ceremony/AK0I1566_for FB.jpg">
+                                    </div>
+                                </div>
+                                <div class="gallery-item">
+                                    <div class="content-album"><img src="./images/album/ceremony/AK0I1579_for FB.jpg">
+                                    </div>
+                                </div>
+                                <div class="gallery-item">
+                                    <div class="content-album"><img src="./images/album/judgingDay/IMG_6036.JPG"></div>
+                                </div>
+                                <div class="gallery-item">
+                                    <div class="content-album"><img src="./images/album/judgingDay/IMG_6037.JPG"></div>
+                                </div>
+                                <div class="gallery-item">
+                                    <div class="content-album"><img src="./images/album/judgingDay/IMG_6039.JPG"></div>
+                                </div>
+                                <div class="gallery-item">
+                                    <div class="content-album"><img src="./images/album/judgingDay/IMG_6044.JPG"></div>
+                                </div>
+                                <div class="gallery-item">
+                                    <div class="content-album"><img src="./images/album/judgingDay/IMG_6068.JPG"></div>
+                                </div>
+                            </div>
                         </div>
                         <div class="content hide" id="contact">
                             <h1 data-i18n class="title-color">聯絡我們</h1>
@@ -203,7 +271,7 @@
         </div>
     </div>
 </body>
-
+<script src="./js/gallery.js"></script>
 
 </html>
 <script>
@@ -299,14 +367,15 @@
 
 <script>
     $(function () {
-        $('.menu-text li>a').click(function () {
+        $('.nav.menu-text li>a').click(function () {
             // nav menu li control
-            $('.menu-text li>a').not(this).removeClass('active-filter');
+            $('.nav.menu-text li>a').not(this).removeClass('active-filter');
             $(this).addClass('active-filter');
 
             // content control
             $(".content").addClass("hide").removeClass("w3-animate-left");
             $($(this).attr('href')).removeClass('hide').addClass('w3-animate-left');
+            window.dispatchEvent(new Event('resize'));
         });
     })
 </script>
