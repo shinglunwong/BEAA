@@ -23,11 +23,12 @@ h1, h2, h3, h4, h5, h6, p {
   display: inline-block;
   font-weight: 400;
   padding: 5px 10px;
-  color: #fff;
-  padding-bottom: 4px;
+  color: #2d2d2d;
   text-transform: uppercase;
-  background-color: #b28647;
-  border-radius: 100px;
+  border-top: 5px solid #b28647;
+  border-bottom: 5px solid #b28647;
+  border-radius: 5px;
+  font-weight: bolder;
   width: fit-content;
 }
 
@@ -92,20 +93,22 @@ ul {
   letter-spacing: 0.15em;
   font-size: 12px;
   text-decoration: none;
-  padding: 2px 12px;
+  padding: 5px 15px;
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
 }
 
 .menu-text li a:hover {
   background-color: #b28647;
-  border-radius: 100px;
-  color: #fff !important;
+  border-radius: 10px;
+  padding: 5px 15px;
+  color: #fff;
 }
 
 .active-filter {
   background-color: #b28647;
-  border-radius: 100px;
+  border-radius: 10px;
+  padding: 5px 15px;
   color: #fff !important;
 }
 
