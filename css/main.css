@@ -55,7 +55,7 @@ h1, h2, h3, h4, h5, h6, p {
   display: flex;
   width: 80%;
   align-items: center;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url("../images/group.jpg") no-repeat center fixed;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url("../images/group.jpg") no-repeat fixed;
   background-size: cover;
 }
 
