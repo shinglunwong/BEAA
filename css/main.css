@@ -1,5 +1,4 @@
-html,
-body {
+html, body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
@@ -8,29 +7,15 @@ body {
   overflow: hidden;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
+h1, h2, h3, h4, h5, h6, p {
   color: #2d2d2d;
 }
 
 .title-color {
   color: #b28647;
   border-bottom: 4px solid #b28647;
-}
-
-.title-color:after {
-  content: attr(data-ct);
-  left: -102px;
-  position: relative;
-  color: rgba(0, 0, 0, 0.04);
-  font-size: 72px;
-  z-index: -1;
-  font-weight: 300;
+  z-index: 2;
+  text-shadow: 60px -25px 0px rgba(0, 0, 0, 0.08)
 }
 
 .sub-title {
@@ -70,8 +55,7 @@ p {
   display: flex;
   width: 80%;
   align-items: center;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
-    url("../images/group.jpg") no-repeat center fixed;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url("../images/group.jpg") no-repeat center fixed;
   background-size: cover;
 }
 
