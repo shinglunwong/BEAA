@@ -1,5 +1,4 @@
-html,
-body {
+html, body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
@@ -8,13 +7,7 @@ body {
   overflow: hidden;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
+h1, h2, h3, h4, h5, h6, p {
   color: #2d2d2d;
   line-height: 1.25;
 }
@@ -36,7 +29,7 @@ p {
   border-top: 5px solid #b28647;
   border-bottom: 5px solid #b28647;
   border-radius: 5px;
-  font-weight: bolder;  
+  font-weight: bolder;
   width: fit-content;
 }
 
@@ -70,8 +63,7 @@ p {
   display: flex;
   width: 80%;
   align-items: center;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
-    url("../images/group.jpg") no-repeat fixed;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url("../images/group.jpg") no-repeat fixed;
   background-size: cover;
 }
 
@@ -161,4 +153,13 @@ ul {
 #map {
   border: 12px solid #bda26b;
   object-fit: contain;
+}
+
+.social-links li {
+  display: inline-flex;
+}
+
+.social-links li a {
+  color: #b28647;
+  font-size: 20px;
 }
