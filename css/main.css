@@ -146,3 +146,12 @@ ul {
   border: 12px solid #bda26b;
   object-fit: contain;
 }
+
+.social-links li {
+  display: inline-flex;
+}
+
+.social-links li a {
+  color: #b28647;
+  font-size: 20px;
+}
