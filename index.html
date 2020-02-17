@@ -49,7 +49,7 @@
                     <div class="content-wrapper">
                         <div class="content hide" id="about">
 
-                            <h1 class="title-color">有關『最佳僱員僱主選舉』</h1>
+                            <h1 data-i18n href class="title-color">有關『最佳僱員僱主選舉』</h1>
 
                             <p>
                                 最佳僱員僱主選舉 (BEEA) 表彰了傑出的員工和僱主, 通過更多的溝通和理解促進了更好的公司文化, 進而創造了更加和諧的工作環境和更高的生產效率。
@@ -126,26 +126,27 @@
         "重要日程": "Important Dates",
         "報名及選舉": "Application",
         "上屆回顧": "Past Events",
-        "聯絡我們": "Contact Us"
+        "聯絡我們": "Contact Us",
+        "有關『最佳僱員僱主選舉』": "About『Best Employee and Employer Award』"
     }
 
     const chiConfig = {
-        "Best Employee and Employer Award" : "最佳僱員僱主選舉",
-        "Important Dates" : "重要日程",
-        "Application" : "報名及選舉",
-        "Past Events" : "上屆回顧",
-        "Contact Us" : "聯絡我們"
+        "Best Employee and Employer Award": "最佳僱員僱主選舉",
+        "Important Dates": "重要日程",
+        "Application": "報名及選舉",
+        "Past Events": "上屆回顧",
+        "Contact Us": "聯絡我們",
+        "About『Best Employee and Employer Award』": "有關『最佳僱員僱主選舉』"
     }
 
     document.querySelector('#languageChi').style.display = 'none';
-
     document.querySelector('#languageEng').addEventListener('click', function () {
         document.querySelector('#languageEng').style.display = 'none';
         document.querySelector('#languageChi').style.display = 'block';
 
         const elements = document.querySelectorAll("[data-i18n]");
         const replaceText = (el) => {
-            const key = el.text;
+            const key = el.innerText;
             el.innerText = engConfig[key] || key;
         }
         console.log(elements);
@@ -157,7 +158,7 @@
         document.querySelector('#languageEng').style.display = 'block';
         const elements = document.querySelectorAll("[data-i18n]");
         const replaceText = (el) => {
-            const key = el.text;
+            const key = el.innerText;
             el.innerText = chiConfig[key] || key;
         }
         console.log(elements);
