@@ -12,6 +12,7 @@
     <script src="https://code.jquery.com/jquery-3.4.1.js"
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.1.1/gsap.min.js"></script>
+    <script src="https://unpkg.com/i18next/dist/umd/i18next.min.js"></script>
     <title>Document</title>
 </head>
 
@@ -19,37 +20,36 @@
     <div class="scene">
         <div class="card">
             <div class="cardFace cardFaceFront">
-                <!-- <div class="stars">
+                <div class="landing">
+                    <!-- put landing content here -->
+                    <div class="landingTitle">
 
-                </div>
-                <div class="twinkling"> -->
-                    <div class="landing">
-                        <!-- put landing content here -->
-                        <div class="landingTitle">
-
-                            <img src="./images/logo.png" alt="BEEA 2020 Logo">
-                            <h1>最佳僱員僱主選舉 2020</h1>
-                        </div>
-                        <div class="landingImage">
-                            <img class="trophy" src='./images/trophy.png' alt='trophy'>
-                        </div>
+                        <img src="./images/logo.png" alt="BEEA 2020 Logo">
+                        <h1>最佳僱員僱主選舉 2020</h1>
                     </div>
-                <!-- </div> -->
+                    <div class="landingImage">
+                        <img class="trophy" src='./images/trophy.png' alt='trophy'>
+                    </div>
+                </div>
             </div>
             <div class="cardFace cardFaceBack">
                 <div class="container">
                     <div class="nav-menu">
                         <img id="logo" src="images/logo.png">
                         <ul class="menu-text clk">
-                            <li><a href="#about">關於BEAA</a></li>
-                            <li><a href="#application">報名及選舉須知</a></li>
-                            <li><a href="#album">BEAA2019</a></li>
-                            <li><a href="#contact">聯絡我們</a></li>
+                            <li><a data-i18n href="#about">最佳僱員僱主選舉</a></li>
+                            <li><a data-i18n href="#dates">重要日程</a></li>
+                            <li><a data-i18n href="#application">報名及選舉</a></li>
+                            <li><a data-i18n href="#album">上屆回顧</a></li>
+                            <li><a data-i18n href="#contact">聯絡我們</a></li>
+                            <li id="languageEng"><a href="javascript:void(0)">English</a></li>
+                            <li id="languageChi"><a href="javascript:void(0)">中文</a></li>
                         </ul>
                     </div>
                     <div class="content-wrapper">
                         <div class="content hide" id="about">
-                            <h1 class="title-color" data-ct="關於BEEA">關於BEEA</h1>
+
+                            <h1 class="title-color">有關『最佳僱員僱主選舉』</h1>
 
                             <p>
                                 最佳僱員僱主選舉 (BEEA) 表彰了傑出的員工和僱主, 通過更多的溝通和理解促進了更好的公司文化, 進而創造了更加和諧的工作環境和更高的生產效率。
@@ -76,6 +76,9 @@
                                 鑑於當前的形勢和對2020年的負面經濟預測， 我們希望透過活動，可以促進及宣傳企業如何在不損害勞資雙方關係的情況下，對抗經濟衰退。
                                 我們亦希望透過獎項，表揚表現傑出的僱員僱主，展現於持續發展、危機決策與管理等範疇的優秀範例，鼓勵各中小企跟隨著並肩作戰，透過寒冬看春天。
                             </p>
+                        </div>
+                        <div class="content hide" id="dates">
+
                         </div>
                         <div class="content hide" id="application">
 
@@ -113,10 +116,55 @@
 <script>
     document.querySelector('.cardFaceFront').addEventListener('click', function () {
         document.querySelector('.card').classList.toggle('is-flipped');
-        document.querySelector('.stars').remove();
-        document.querySelector('.twinkling').remove();
+        document.querySelector('.cardFaceFront').remove();
     });
 </script>
+
+<script>
+    const engConfig = {
+        "最佳僱員僱主選舉": "Best Employee and Employer Award",
+        "重要日程": "Important Dates",
+        "報名及選舉": "Application",
+        "上屆回顧": "Past Events",
+        "聯絡我們": "Contact Us"
+    }
+
+    const chiConfig = {
+        "Best Employee and Employer Award" : "最佳僱員僱主選舉",
+        "Important Dates" : "重要日程",
+        "Application" : "報名及選舉",
+        "Past Events" : "上屆回顧",
+        "Contact Us" : "聯絡我們"
+    }
+
+    document.querySelector('#languageChi').style.display = 'none';
+
+    document.querySelector('#languageEng').addEventListener('click', function () {
+        document.querySelector('#languageEng').style.display = 'none';
+        document.querySelector('#languageChi').style.display = 'block';
+
+        const elements = document.querySelectorAll("[data-i18n]");
+        const replaceText = (el) => {
+            const key = el.text;
+            el.innerText = engConfig[key] || key;
+        }
+        console.log(elements);
+        elements.forEach(el => replaceText(el));
+    });
+
+    document.querySelector('#languageChi').addEventListener('click', function () {
+        document.querySelector('#languageChi').style.display = 'none';
+        document.querySelector('#languageEng').style.display = 'block';
+        const elements = document.querySelectorAll("[data-i18n]");
+        const replaceText = (el) => {
+            const key = el.text;
+            el.innerText = chiConfig[key] || key;
+        }
+        console.log(elements);
+        elements.forEach(el => replaceText(el));
+    });
+</script>
+
 
 <script>
     $(function () {
@@ -133,8 +181,8 @@
 </script>
 
 <script>
-
     gsap.fromTo(".trophy", { y: -1200 }, { y: 150, duration: 3 });
 </script>
+
 
 </html>
