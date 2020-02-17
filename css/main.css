@@ -36,6 +36,7 @@ p {
   border-bottom: 5px solid #b28647;
   border-radius: 5px;
   font-weight: bolder;  
+  width: fit-content;
 }
 
 .container {
@@ -120,23 +121,32 @@ ul {
 }
 
 .hide {
-  display: none;
+  display: none !important;
 }
 
 .content {
-  background-color: white;
-  background: linear-gradient(
-      0deg,
-      rgba(255, 255, 255, 0.9),
-      rgba(255, 255, 255, 0.9)
-    ),
-    url("../images/group.jpg") no-repeat center;
+  background-color: rgba(255, 255, 255, 1);
+  /* background: linear-gradient(0deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url("../images/group.jpg") no-repeat center; */
   background-size: cover;
   padding: 30px;
   min-height: 100%;
   max-height: 100%;
-  width: 100%;
+  width: 80%;
   overflow: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 1600px) {
+  .content {
+    width: 90%;
+  }
+}
+
+#album {
+  display: inline-block;
+  width: 100%;
 }
 
 .no-padding {
@@ -145,4 +155,5 @@ ul {
 
 #map {
   border: 12px solid #bda26b;
+  object-fit: contain;
 }
