@@ -38,7 +38,10 @@
             </div>
             <div class="cardFace cardFaceBack">
                 <div class="container">
-                    <div class="nav-menu">
+                    <div class="mobile-nav">
+                        <i onclick="closeNav()" class="fas fa-bars"></i>
+                    </div>
+                    <div class="nav-menu" id="nav-menu">
                         <img id="logo" src="images/logo.png">
                         <ul class="nav menu-text clk">
                             <li><a data-i18n href="#about">最佳僱員僱主選舉</a></li>
@@ -88,9 +91,9 @@
                                     <div class="tl-bg" style="background-image: url(./images/panel1.jpg)"></div>
                                     <div class="tl-year">
                                         <p data-i18n class="f2 heading--sanSerif">開幕典禮</p>
+                                        <h3 data-i18n>2月28日</h3>
                                     </div>
                                     <div class="tl-content">
-                                        <h1 data-i18n>2月28日</h1>
                                         <p>我們將會在活動 Facebook
                                             專頁上載影片公佈活動參加資格及細則、問卷調查結果、以及主禮嘉賓分享。開幕禮之後，我們更會不定期上載不同嘉賓分享、活動相關資料、以及參加者分享，
                                             敬請留意及關注！</p>
@@ -100,9 +103,9 @@
                                     <div class="tl-bg" style="background-image: url(./images/panel2.jpg)"></div>
                                     <div class="tl-year">
                                         <p data-i18n class="f2 heading--sanSerif">提名階段</p>
+                                        <h3 data-i18n class="f3 text--accent ttu">2月28日 - <br> 4月24日</h3>
                                     </div>
                                     <div class="tl-content">
-                                        <h1 data-i18n class="f3 text--accent ttu">2月28日 - 4月24日</h1>
                                         <p>如申請人在3月31日或之前報名及提交所有相關文件，可享行政費用港幣一千元優惠！</p>
                                     </div>
                                 </div>
@@ -110,9 +113,9 @@
                                     <div class="tl-bg" style="background-image: url(./images/panel3.jpg)"></div>
                                     <div class="tl-year">
                                         <p data-i18n class="f2 heading--sanSerif">審核面試</p>
+                                        <h3 data-i18n class="f3 text--accent ttu">5月16日</h3>
                                     </div>
                                     <div class="tl-content">
-                                        <h1 data-i18n class="f3 text--accent ttu">5月16日</h1>
                                         <p>Mauris cursus magna at libero lobortis tempor. Suspendisse potenti. Aliquam
                                             interdum vulputate neque sit amet varius. Maecenas ac pulvinar nisi. Fusce
                                             vitae nunc ultrices, tristique dolor at, porttitor dolor. Etiam id cursus
@@ -124,9 +127,9 @@
                                     <div class="tl-bg" style="background-image: url(./images/panel4.jpg)"></div>
                                     <div class="tl-year">
                                         <p data-i18n class="f2 heading--sanSerif">頒獎典禮</p>
+                                        <h3 data-i18n class="f3 text--accent ttu">7月10日</h3>
                                     </div>
                                     <div class="tl-content">
-                                        <h1 data-i18n class="f3 text--accent ttu">7月10日</h1>
                                         <p>Suspendisse ac mi at dolor sodales faucibus. Nunc sagittis ornare purus non
                                             euismod. Donec vestibulum efficitur tortor, eget efficitur enim facilisis
                                             consequat. Vivamus laoreet laoreet elit. Ut ut varius metus, bibendum
@@ -267,6 +270,7 @@
     </div>
 </body>
 <script src="./js/gallery.js"></script>
+<script src="./js/nav.js"></script>
 
 </html>
 <script>

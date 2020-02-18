@@ -44,14 +44,18 @@ h1, h2, h3, h4, h5, h6, p {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  width: 20%;
+  flex: 0 0 280px;
   z-index: 9;
   box-shadow: 1px 0px 4px 0px rgba(0, 0, 0, 0.13);
   transition: all 0.4s ease-in-out;
-  -webkit-user-select: none;  /* Chrome all / Safari all */
-  -moz-user-select: none;     /* Firefox all */
-  -ms-user-select: none;      /* IE 10+ */
-  user-select: none;          /* Likely future */  
+  -webkit-user-select: none;
+  /* Chrome all / Safari all */
+  -moz-user-select: none;
+  /* Firefox all */
+  -ms-user-select: none;
+  /* IE 10+ */
+  user-select: none;
+  /* Likely future */
 }
 
 #logo {
@@ -61,7 +65,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 .content-wrapper {
   display: flex;
-  width: 80%;
+  width: calc(100% - 250px);
   align-items: center;
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url("../images/group.jpg") no-repeat fixed;
   background-size: cover;
@@ -141,6 +145,12 @@ ul {
   }
 }
 
+@media only screen and (max-width: 1300px) {
+  .content {
+    width: 100%;
+  }
+}
+
 #album {
   display: inline-block;
   width: 100%;
@@ -162,4 +172,37 @@ ul {
 .social-links li a {
   color: #b28647;
   font-size: 20px;
+}
+
+.mobile-nav {
+  z-index: 10;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  padding: 5px;
+  cursor: pointer;
+  display: none;
+}
+
+.mobile-nav>i {
+  font-size: 30px;
+  color: #b28647;
+}
+
+@media screen and (max-width: 1000px) {
+  .content-wrapper {
+    width: 100%;
+    /* background: #000; */
+  }
+  .mobile-nav {
+    display: block;
+  }
+}
+
+.display-none {
+  display: none;
+}
+
+.full-width {
+  width: 100%;
 }
