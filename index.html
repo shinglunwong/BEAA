@@ -12,6 +12,7 @@
     <link rel="stylesheet" type="text/css" href="./css/flip.css">
     <link rel="stylesheet" type="text/css" href="./css/timeline.css">
     <link rel="stylesheet" type="text/css" href="./css/gallery.css">
+    <link rel="stylesheet" type="text/css" href="./css/slick.css">
     <script src="https://code.jquery.com/jquery-3.4.1.js"
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.1.1/gsap.min.js"></script>
@@ -168,18 +169,43 @@
                             </ol>
                         </div>
                         <div class="content hide" id="sponsorSupport">
-                            <div class="autoplay">
-                                <div>your content 1</div>
-                                <div>your content 2</div>
-                                <div>your content 3</div>
-                                <div>your content 4</div>
-                                <div>your content 5</div>
-                                <div>your content 6</div>
-                                <div>your content 7</div>
-                                <div>your content 8</div>
-                                <div>your content 9</div>
-                                <div>your content 10</div>
-                                <div>your content 11</div>
+                            <h1 data-i18n class="title-color">贊助及支持機構</h1>
+                            <p data-i18n>誠摯感謝贊助及支持我們的機構</p>
+                            <h2 data-i18n class=" sub-title">贊助機構</h2>
+                            <img src='./images/logo/HKJC Foundation.png' alt='HKJC Fonudation' />
+                            <br />
+                            <h2 data-i18n class=" sub-title">支持機構</h2>
+                            <div class="slick1">
+                                <img src='./images/logo/2GHK.png' alt='2GHK' />
+                                <img src='./images/logo/AHKNS.png' alt='AHKNS' />
+                                <img src='./images/logo/CEO Club.png' alt='CEO Club' />
+                                <img src='./images/logo/CMAHK.png' alt='CMAHK' />
+                                <img src='./images/logo/ECAHK.png' alt='ECAHK' />
+                                <img src='./images/logo/FITMI.png' alt='FITMI' />
+                                <img src='./images/logo/HKAIM.png' alt='HKAIM' />
+                                <img src='./images/logo/HKAS.png' alt='HKAS' />
+                                <img src='./images/logo/HKCIEGU.png' alt='HKCIEGU' />
+                                <img src='./images/logo/HKEAGA.png' alt='HKEAGA' />
+                                <img src='./images/logo/HKFA.png' alt='HKFA' />
+                                <img src='./images/logo/HKGCC.png' alt='HKGCC' />
+                                <img src='./images/logo/HKGCSMB.png' alt='HKGCSMB' />
+                            </div>
+                            <div class="slick1">
+                                <img src='./images/logo/HKGS.png' alt='HKGS' />
+                                <img src='./images/logo/HKMA.png' alt='HKMA' />
+                                <img src='./images/logo/HKRCA.png' alt='HKRCA' />
+                                <img src='./images/logo/HKSME.png' alt='HKSME' />
+                                <img src='./images/logo/HKYIC.png' alt='HKYIC' />
+                                <img src='./images/logo/IBHGU.png' alt='IBHGU' />
+                                <img src='./images/logo/IDA.png' alt='IDA' />
+                                <img src='./images/logo/IICT.png' alt='IICT' />
+                                <img src='./images/logo/iProA.png' alt='iProA' />
+                                <img src='./images/logo/IWEA.png' alt='IWEA' />
+                                <img src='./images/logo/RHDMA.png' alt='RHDMA' />
+                                <img src='./images/logo/ROne.png' alt='ROne' />
+                                <img src='./images/logo/SAI.png' alt='SAI' />
+                                <img src='./images/logo/SME.png' alt='SME' />
+                                <img src='./images/logo/YIEA.png' alt='YIEA' />
                             </div>
                         </div>
                         <div class="content hide" id="album">
@@ -287,6 +313,8 @@
         "重要日程": "Important Dates",
         "報名及選舉": "Application Method",
         "贊助及支持機構": "Sponsor & Support",
+        "贊助機構": "Sponsoring Organization",
+        "支持機構": "Supporting Organization",
         "上屆回顧": "Past Events",
         "聯絡我們": "Contact Us",
         "有關『最佳僱員僱主選舉』": "About『Best Employee and Employer Award』",
@@ -326,6 +354,7 @@
         "獲提名候選人不得是當時任何刑查對象": "The nominated candidate must not be the subject of any criminal investigation throughout the event ",
         "最後裁決以評選團之決定為準": "The final decision is subject to the decision of the judging panel ",
         "如獲提名候選人的資料被證實虛假，其資格將被取消": "If the information of the nominated candidate is proven to be false, they will be disqualified",
+        "誠摯感謝贊助及支持我們的機構": "Our sincerest thanks to our sponsoring and supporting orgainzations"
     }
 
     const chiConfig = {
@@ -337,6 +366,10 @@
         "Application Method": "報名及選舉",
         "SPONSOR & SUPPORT": "贊助及支持機構",
         "Sponsor & Support": "贊助及支持機構",
+        "SUPPORTING ORGANIZATION": "支持機構",
+        "Supporting Organization": "支持機構",
+        "SPONSORING ORGANIZATION": "贊助機構",
+        "Sponsoring Organization": "贊助機構",
         "PAST EVENTS": "上屆回顧",
         "Past Events": "上屆回顧",
         "CONTACT US": "聯絡我們",
@@ -381,6 +414,7 @@
         "The nominated candidate must not be the subject of any criminal investigation throughout the event": "獲提名候選人不得是當時任何刑查對象",
         "The final decision is subject to the decision of the judging panel": "最後裁決以評選團之決定為準",
         "If the information of the nominated candidate is proven to be false, they will be disqualified": "如獲提名候選人的資料被證實虛假，其資格將被取消",
+        "Our sincerest thanks to our sponsoring and supporting orgainzations": "誠摯感謝贊助及支持我們的機構"
     }
 
     document.querySelector('#languageChi').style.display = 'none';
@@ -429,37 +463,34 @@
 </script>
 
 <script>
-    $('.autoplay').slick({
+    $('.slick1').slick({
+        dots: false,
+        prevArrow: false,
+        nextArrow: false,
         infinite: true,
         autoplay: true,
-        autoplaySpeed: 2000,
-        speed: 2000,
-        slidesToShow: 5,
-        slidesToScroll: 1,
+        autoplaySpeed: 0,
+        speed: 1500,
+        slidesToShow: 8,
         cssEase: "linear",
-        accessibility: false,
+        pauseOnHover: false,
         responsive: [
             {
-                breakpoint: 1024,
+                breakpoint: 1025,
                 settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 3,
-                    infinite: true,
-                    dots: true
+                    slidesToShow: 5,
                 }
             },
             {
-                breakpoint: 600,
+                breakpoint: 769,
                 settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2
+                    slidesToShow: 4,
                 }
             },
             {
                 breakpoint: 480,
                 settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
+                    slidesToShow: 2,
                 }
             }
             // You can unslick at a given breakpoint now by adding:
