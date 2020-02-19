@@ -20,8 +20,13 @@ gallery.querySelectorAll('img').forEach(function (item) {
 window.addEventListener('resize', resizeAll);
 gallery.querySelectorAll('.gallery-item').forEach(function (item) {
     item.addEventListener('click', function () {
-        if (window.innerWidth > 600) {
+        if (window.innerWidth > 600 && window.innerWidth < 1000) {
             item.classList.toggle('full');
+            realCloseNav();
+            console.log('full');
+        } else if (window.innerWidth >= 1000) {
+            item.classList.toggle('full-no-nav');
+            console.log('nonav');
         }
     });
 });
