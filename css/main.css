@@ -1,5 +1,4 @@
-html,
-body {
+html, body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
@@ -8,13 +7,7 @@ body {
   overflow: hidden;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
+h1, h2, h3, h4, h5, h6, p {
   color: #2d2d2d;
   line-height: 1.25;
 }
@@ -69,8 +62,7 @@ p {
   display: flex;
   width: calc(100% - 250px);
   align-items: center;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
-    url("../images/group.jpg") no-repeat fixed;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url("../images/group.jpg") no-repeat fixed;
   background-size: cover;
 }
 
@@ -187,7 +179,7 @@ ul {
   display: none;
 }
 
-.mobile-nav > i {
+.mobile-nav>i {
   font-size: 30px;
   color: #b28647;
 }
@@ -209,6 +201,9 @@ ul {
 @media screen and (max-width: 700px) {
   .nav-menu {
     flex-basis: 100%;
+  }
+  .title-color {
+    text-shadow: none;
   }
 }
 
