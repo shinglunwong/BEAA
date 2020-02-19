@@ -227,3 +227,14 @@ span a {
 span a:hover {
   color: blue;
 }
+
+#early-bird {
+  width: 100px;
+  height: 100px;
+  background-image: url('../images/seal.png');
+}
+
+#made-by {
+  font-size: 10px;
+  color: #b2b2b2;
+}
