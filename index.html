@@ -1182,14 +1182,14 @@
         $('.cardFaceFront').click(function () {
             if (clickDisabled)
                 return;
+            document.querySelector('.card').classList.toggle('is-flipped');
+            document.querySelector('.cardFaceFront').remove();
         });
-        document.querySelector('.card').classList.toggle('is-flipped');
-        document.querySelector('.cardFaceFront').remove();
 
-        setTimeout(function () { clickDisabled = false; }, 6000);
+        setTimeout(function () { clickDisabled = false; }, 4000);
         setTimeout(function () {
             $(".landing").css('cursor', 'pointer'); //pointer is the "hand"
-        }, 6000);
+        }, 4000);
     });
 </script>
 
@@ -1350,20 +1350,20 @@
 </script>
 
 <script>
+    gsap.from(".trophy", { scale: ".97", duration: 1, repeat: 'infinite', yoyo: true });
     var tl = new TimelineMax({});
-    tl.fromTo(".trophy", { y: -1200 }, { y: 0, duration: 5 }, 0);
-    tl.fromTo(".landingWords", { y: 1200, ease: "power2.out" }, { y: 0, duration: 5, ease: "power2.out" }, 0);
-    tl.fromTo("#the", { y: -1200, ease: "power2.out" }, { y: 0, duration: 5, ease: "power2.out" }, 0);
-    tl.fromTo("#openBracket", { y: -1200, ease: "power2.out" }, { y: 0, duration: 5, ease: "power2.out" }, 0);
-    tl.fromTo("#best", { y: -1200, ease: "power2.out" }, { y: 0, duration: 5, ease: "power2.out" }, 0);
-    tl.fromTo("#employee", { y: -1200, ease: "power2.out" }, { y: 0, duration: 5, ease: "power2.out" }, 0);
-    tl.fromTo("#and", { y: -1200, ease: "power2.out" }, { y: 0, duration: 5, ease: "power2.out" }, 0);
-    tl.fromTo("#employer", { y: -1200, ease: "power2.out" }, { y: 0, duration: 5, ease: "power2.out" }, 0);
-    tl.fromTo("#closeBracket", { y: -1200, ease: "power2.out" }, { y: 0, duration: 5, ease: "power2.out" }, 0);
-    tl.fromTo("#award", { y: -1200, ease: "power2.out" }, { y: 0, duration: 5, ease: "power2.out" }, 0);
-    tl.fromTo("#year2020", { y: -1200, ease: "power2.out" }, { y: 0, duration: 5, ease: "power2.out" }, 0);
-    tl.fromTo(".landingInstruction", { y: 1200, ease: "linear" }, { y: 0, duration: 3, ease: "linear", delay: 2 }, 1);
-    gsap.from(".trophy", { scale: ".97", duration: 1, repeat: 'infinite', yoyo: true, delay: 3.5 });
+    tl.fromTo(".landingWords", { y: 1200, ease: "power2.out" }, { y: 0, duration: 3, ease: "power2.out" }, 0);
+    tl.fromTo("#the", { y: -1200, ease: "power2.out" }, { y: 0, duration: 3, ease: "power2.out" }, 0);
+    tl.fromTo("#openBracket", { y: -1200, ease: "power2.out" }, { y: 0, duration: 3, ease: "power2.out" }, 0);
+    tl.fromTo("#best", { y: -1200, ease: "power2.out" }, { y: 0, duration: 3, ease: "power2.out" }, 0);
+    tl.fromTo("#employee", { y: -1200, ease: "power2.out" }, { y: 0, duration: 3, ease: "power2.out" }, 0);
+    tl.fromTo("#and", { y: -1200, ease: "power2.out" }, { y: 0, duration: 3, ease: "power2.out" }, 0);
+    tl.fromTo("#employer", { y: -1200, ease: "power2.out" }, { y: 0, duration: 3, ease: "power2.out" }, 0);
+    tl.fromTo("#closeBracket", { y: -1200, ease: "power2.out" }, { y: 0, duration: 3, ease: "power2.out" }, 0);
+    tl.fromTo("#award", { y: -1200, ease: "power2.out" }, { y: 0, duration: 3, ease: "power2.out" }, 0);
+    tl.fromTo("#year2020", { y: -1200, ease: "power2.out" }, { y: 0, duration: 3, ease: "power2.out" }, 0);
+    tl.fromTo(".landingInstruction", { y: 1200, ease: "linear" }, { y: 0, duration: 3, ease: "linear" }, 1);
+
 
 </script>
 
