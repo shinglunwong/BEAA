@@ -21,7 +21,6 @@ h1, h2, h3, h4, h5, h6, p {
 
 .sub-title {
   font-size: 16px;
-  display: inline-block;
   font-weight: 400;
   padding: 5px 10px;
   color: #2d2d2d;
@@ -151,6 +150,11 @@ ul {
   width: 100%;
 }
 
+#application {
+  display: inline-block;
+  width: 100%;
+}
+
 .no-padding {
   padding: 0;
 }
@@ -237,4 +241,17 @@ span a:hover {
 #made-by {
   font-size: 10px;
   color: #b2b2b2;
+}
+
+#download-btn {
+  width: 115px;
+  height: 25px;
+  background: #b28647;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  margin: 20px;
 }
