@@ -1173,9 +1173,9 @@
         $('.cardFaceFront').click(function () {
             if (clickDisabled)
                 return;
+                document.querySelector('.card').classList.toggle('is-flipped');
+                document.querySelector('.cardFaceFront').remove();
         });
-        document.querySelector('.card').classList.toggle('is-flipped');
-        document.querySelector('.cardFaceFront').remove();
 
         setTimeout(function () { clickDisabled = false; }, 6000);
         setTimeout(function () {

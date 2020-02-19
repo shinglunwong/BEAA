@@ -29,7 +29,7 @@
   flex-direction: column;
 }
 
-.landingTitle  {
+.landingTitle {
   text-align: center;
 }
 .landingTitle img {
@@ -38,6 +38,24 @@
 
 @media only screen and (max-width: 1024px) {
   .landingImage img {
-    opacity: 20%;
+    opacity: 0.2;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .landingTitle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .landingImage img {
+  width: 80%;
+  height: 80%;
   }
 }
