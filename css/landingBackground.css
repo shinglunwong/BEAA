@@ -36,7 +36,7 @@
   height: 40vh;
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 2000px) {
   .landingImage img {
     opacity: 0.2;
     position: absolute;
