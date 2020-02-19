@@ -40,8 +40,7 @@
   background: rgba(3, 22, 37, 0.85);
   opacity: 1;
   -webkit-transition: opacity 0.5s ease;
-  transition: opacity 0.5s ease;
-}
+  transition: opacity 0.5s ease;}
 
 .tl-item:before {
   background: -webkit-gradient( linear, left top, left bottom, from(rgba(0, 0, 0, 0)), color-stop(75%, black));
@@ -93,7 +92,7 @@
   position: relative;
   z-index: 1;
   text-align: center;
-  margin: 0 1.618em;
+  margin: 3em 1.618em 0;
   top: 55%;
   opacity: 0;
 }
