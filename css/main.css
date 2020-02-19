@@ -48,18 +48,13 @@ h1, h2, h3, h4, h5, h6, p {
   z-index: 9;
   box-shadow: 1px 0px 4px 0px rgba(0, 0, 0, 0.13);
   transition: all 0.4s ease-in-out;
-  -webkit-user-select: none;
-  /* Chrome all / Safari all */
-  -moz-user-select: none;
-  /* Firefox all */
-  -ms-user-select: none;
-  /* IE 10+ */
-  user-select: none;
-  /* Likely future */
 }
 
 #logo {
   width: 80%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
 }
 
@@ -194,8 +189,18 @@ ul {
     width: 100%;
     /* background: #000; */
   }
+  .content {
+    padding-top: 50px;
+    justify-content: flex-start;
+  }
   .mobile-nav {
     display: block;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .nav-menu {
+    flex-basis: 100%;
   }
 }
 
