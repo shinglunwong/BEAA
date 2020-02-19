@@ -902,6 +902,7 @@
                                     href="mailto:beea@jcidragon.org.hk?subject=Best Employee and Employer Award 2020 Enquiry"><i
                                         class="fas fa-envelope"></i></i></a></li>
                         </ul>
+                        <p id="made-by">Made With ❤ by <a href="cohort6products.com">Cohort 6 Productions</a></p>
                     </div>
                     <div class="content-wrapper">
                         <div class="content hide" id="about">
@@ -999,6 +1000,9 @@
                                 <li data-i18n>最後裁決以評選團之決定為準</li>
                                 <li data-i18n>如獲提名候選人的資料被證實虛假，其資格將被取消</li>
                             </ol>
+                            <div id="early-bird">
+                                <img src="./images/earlyBirdChi.png">
+                            </div>
                         </div>
                         <div class="content hide" id="sponsorSupport">
                             <h1 data-i18n class="title-color">贊助及支持機構</h1>
@@ -1302,7 +1306,7 @@
     document.querySelector('#languageEng').addEventListener('click', function () {
         document.querySelector('#languageEng').style.display = 'none';
         document.querySelector('#languageChi').style.display = 'block';
-
+        document.getElementById('early-bird').getElementsByTagName('img')[0].src = './images/earlyBirdEng.png';
         const elements = document.querySelectorAll("[data-i18n]");
         const replaceText = (el) => {
             const key = el.innerText.trim();
@@ -1314,6 +1318,7 @@
     document.querySelector('#languageChi').addEventListener('click', function () {
         document.querySelector('#languageChi').style.display = 'none';
         document.querySelector('#languageEng').style.display = 'block';
+        document.getElementById('early-bird').getElementsByTagName('img')[0].src = './images/earlyBirdChi.png';
         const elements = document.querySelectorAll("[data-i18n]");
         const replaceText = (el) => {
             const key = el.innerText.trim();

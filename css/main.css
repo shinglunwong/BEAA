@@ -227,3 +227,14 @@ span a {
 span a:hover {
   color: blue;
 }
+
+#early-bird>img {
+  width: 250px;
+  height: 250px;
+  float: right;
+}
+
+#made-by {
+  font-size: 10px;
+  color: #b2b2b2;
+}
