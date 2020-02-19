@@ -924,7 +924,7 @@
                             </p>
                         </div>
                         <div class="content hide" id="dates">
-                            <h1 data-i18n class="title-color">有關『最佳僱員僱主選舉』</h1>
+                            <h1 data-i18n class="title-color">重要日程</h1>
                             <section id="timeline">
                                 <div class="tl-item">
                                     <div class="tl-bg" style="background-image: url(./images/panel1.jpg)"></div>
@@ -1001,7 +1001,7 @@
                                 <li data-i18n>如獲提名候選人的資料被證實虛假，其資格將被取消</li>
                             </ol>
                             <div id="early-bird">
-
+                                <img src="./images/earlyBirdChi.png">
                             </div>
                         </div>
                         <div class="content hide" id="sponsorSupport">
@@ -1222,6 +1222,7 @@
         "We Shall Overcome": "勞資同牽、攜手並肩",
         "WE SHALL OVERCOME": "勞資同牽、攜手並肩",
         "IMPORTANT DATES": "重要日程",
+        "Important Dates": "重要日程",
         "APPLICATION METHOD": "報名及選舉",
         "Application Method": "報名及選舉",
         "SPONSOR & SUPPORT": "贊助及支持機構",
@@ -1282,7 +1283,7 @@
     document.querySelector('#languageEng').addEventListener('click', function () {
         document.querySelector('#languageEng').style.display = 'none';
         document.querySelector('#languageChi').style.display = 'block';
-
+        document.getElementById('early-bird').getElementsByTagName('img')[0].src = './images/earlyBirdEng.png';
         const elements = document.querySelectorAll("[data-i18n]");
         const replaceText = (el) => {
             const key = el.innerText.trim();
@@ -1294,6 +1295,7 @@
     document.querySelector('#languageChi').addEventListener('click', function () {
         document.querySelector('#languageChi').style.display = 'none';
         document.querySelector('#languageEng').style.display = 'block';
+        document.getElementById('early-bird').getElementsByTagName('img')[0].src = './images/earlyBirdChi.png';
         const elements = document.querySelectorAll("[data-i18n]");
         const replaceText = (el) => {
             const key = el.innerText.trim();
