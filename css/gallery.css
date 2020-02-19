@@ -1,6 +1,6 @@
 .full {
-    position: fixed;
-    left: 10%;
+    position: absolute;
+    left: 0;
     top: 0;
     width: 100%;
     height: 100%;
@@ -61,12 +61,14 @@
 @media (max-width: 600px) {
     .gallery {
         grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+        margin: 100px 10px 0 10px;
     }
 }
 
 @media (max-width: 400px) {
     .gallery {
         grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+        margin: 100px 10px 0 10px;
     }
 }
 

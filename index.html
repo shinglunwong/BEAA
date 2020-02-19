@@ -1131,8 +1131,8 @@
         </div>
     </div>
 </body>
-<script src="./js/gallery.js"></script>
 <script src="./js/nav.js"></script>
+<script src="./js/gallery.js"></script>
 
 </html>
 <script>
@@ -1141,11 +1141,11 @@
         $('.cardFaceFront').click(function () {
             if (clickDisabled)
                 return;
-            document.querySelector('.card').classList.toggle('is-flipped');
-            document.querySelector('.cardFaceFront').remove();
         });
         setTimeout(function () { clickDisabled = false; console.log(clickDisabled); }, 4500);
     });
+    document.querySelector('.card').classList.toggle('is-flipped');
+    document.querySelector('.cardFaceFront').remove();
 
 </script>
 
