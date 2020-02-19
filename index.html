@@ -898,7 +898,8 @@
                                         class="fab fa-linkedin"></i></i></a></li>
                             <li><a target="_blank" href="https://www.instagram.com/jcidragonbeea/"><i
                                         class="fab fa-instagram"></i></i></a></li>
-                            <li><a target="_blank" href="mailto:beea@jcidragon.org.hk?subject=Best Employee and Employer Award 2020 Enquiry"><i
+                            <li><a target="_blank"
+                                    href="mailto:beea@jcidragon.org.hk?subject=Best Employee and Employer Award 2020 Enquiry"><i
                                         class="fas fa-envelope"></i></i></a></li>
                         </ul>
                     </div>
@@ -1114,7 +1115,9 @@
                             <span>
                                 <p data-i18n>電　郵 :</p> &nbsp;
                                 <p>
-                                    <a href="mailto:beea@jcidragon.org.hk?subject=Best Employee and Employer Award 2020 Enquiry"> beea@jcidragon.org.hk</a>
+                                    <a
+                                        href="mailto:beea@jcidragon.org.hk?subject=Best Employee and Employer Award 2020 Enquiry">
+                                        beea@jcidragon.org.hk</a>
                                 </p>
                             </span>
                             <span>
@@ -1132,8 +1135,8 @@
         </div>
     </div>
 </body>
-<script src="./js/gallery.js"></script>
 <script src="./js/nav.js"></script>
+<script src="./js/gallery.js"></script>
 
 </html>
 <script>
@@ -1142,9 +1145,9 @@
         $('.cardFaceFront').click(function () {
             if (clickDisabled)
                 return;
-            document.querySelector('.card').classList.toggle('is-flipped');
-            document.querySelector('.cardFaceFront').remove();
         });
+        document.querySelector('.card').classList.toggle('is-flipped');
+        document.querySelector('.cardFaceFront').remove();
 
         setTimeout(function () { clickDisabled = false; }, 6000);
         setTimeout(function () {
