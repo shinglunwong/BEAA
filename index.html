@@ -923,7 +923,7 @@
                             </p>
                         </div>
                         <div class="content hide" id="dates">
-                            <h1 data-i18n class="title-color">有關『最佳僱員僱主選舉』</h1>
+                            <h1 data-i18n class="title-color">重要日程</h1>
                             <section id="timeline">
                                 <div class="tl-item">
                                     <div class="tl-bg" style="background-image: url(./images/panel1.jpg)"></div>
@@ -1144,11 +1144,11 @@
         var clickDisabled = true;
         $('.cardFaceFront').click(function () {
             if (clickDisabled)
-                return;
+            return;
         });
         document.querySelector('.card').classList.toggle('is-flipped');
         document.querySelector('.cardFaceFront').remove();
-
+        
         setTimeout(function () { clickDisabled = false; }, 6000);
         setTimeout(function () {
             $(".landing").css('cursor', 'pointer'); //pointer is the "hand"
@@ -1213,6 +1213,7 @@
         "We Shall Overcome": "勞資同牽、攜手並肩",
         "WE SHALL OVERCOME": "勞資同牽、攜手並肩",
         "IMPORTANT DATES": "重要日程",
+        "Important Dates": "重要日程",
         "APPLICATION METHOD": "報名及選舉",
         "Application Method": "報名及選舉",
         "SPONSOR & SUPPORT": "贊助及支持機構",
