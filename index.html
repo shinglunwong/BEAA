@@ -1005,7 +1005,7 @@
                         <div class="content hide" id="sponsorSupport">
                             <h1 data-i18n class="title-color">贊助及支持機構</h1>
                             <p data-i18n>誠摯感謝贊助及支持我們的機構</p>
-                            <h2 data-i18n class=" sub-title">贊助機構</h2>
+                            <h2 data-i18n class="sub-title">贊助機構</h2>
                             <img src='./images/logo/HKJC Foundation.png' alt='HKJC Fonudation' />
                             <br />
                             <h2 data-i18n class=" sub-title">支持機構</h2>
@@ -1024,8 +1024,6 @@
                                 <img src='./images/logo/HKGCC.png' alt='HKGCC' />
                                 <img src='./images/logo/HKGCSMB.png' alt='HKGCSMB' />
                                 <img src='./images/logo/HKGS.png' alt='HKGS' />
-                            </div>
-                            <div class="slick1">
                                 <img src='./images/logo/HKMA.png' alt='HKMA' />
                                 <img src='./images/logo/HKRCA.png' alt='HKRCA' />
                                 <img src='./images/logo/HKSME.png' alt='HKSME' />
@@ -1312,7 +1310,28 @@
         speed: 1500,
         slidesToShow: 6,
         cssEase: "linear",
-        pauseOnHover: false
+        pauseOnHover: false,
+        rows: 2,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 4,
+                    rows: 1
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 3,
+                    rows: 1
+                }
+            },
+            {
+                breakpoint: 500,
+                settings: "unslick"
+            }
+        ]
     });
 </script>
 

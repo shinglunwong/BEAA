@@ -1,8 +1,27 @@
-#sponsorSupport img{
-    max-width: 10vw;
+#sponsorSupport img {
+  max-width: 10vw;
 }
 
 .slick1 img {
-    padding: 10px;
+  padding: 10px;
+}
+
+@media only screen and (max-width: 1024px) {
+  #sponsorSupport img {
+    max-width: 15vw;
   }
-  
+}
+
+@media only screen and (max-width: 768px) {
+  #sponsorSupport img {
+    max-width: 15vw;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  #sponsorSupport img,
+  #sponsorSupport .slick1 {
+    max-width: 50vw;
+    margin: auto;
+  }
+}
