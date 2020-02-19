@@ -1,9 +1,5 @@
 .landing {
   z-index: 2;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
   cursor: default;
 }
 
@@ -18,44 +14,33 @@
 }
 
 .landingImage img {
-  height: 75vh;
-  opacity: 80%;
+  height: 110vh;
+  opacity: 0.2;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .landingTitle {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .landingTitle {
   text-align: center;
 }
-.landingTitle img {
-  height: 40vh;
-}
 
-@media only screen and (max-width: 2000px) {
+@media only screen and (max-width: 1200px) {
   .landingImage img {
-    opacity: 0.2;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-
-  .landingTitle {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    height: 80vh;
   }
 }
 
 @media only screen and (max-width: 500px) {
   .landingImage img {
-  width: 80%;
-  height: 80%;
+    height: 70vh;
   }
 }
