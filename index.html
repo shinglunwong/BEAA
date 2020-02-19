@@ -1136,10 +1136,17 @@
 
 </html>
 <script>
-    document.querySelector('.cardFaceFront').addEventListener('click', function () {
-        document.querySelector('.card').classList.toggle('is-flipped');
-        document.querySelector('.cardFaceFront').remove();
+    $(document).ready(function () {
+        var clickDisabled = true;
+        $('.cardFaceFront').click(function () {
+            if (clickDisabled)
+                return;
+            document.querySelector('.card').classList.toggle('is-flipped');
+            document.querySelector('.cardFaceFront').remove();
+        });
+        setTimeout(function () { clickDisabled = false; console.log(clickDisabled); }, 4500);
     });
+
 </script>
 
 <script>
